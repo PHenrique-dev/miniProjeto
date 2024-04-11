@@ -9,7 +9,12 @@ class Estacionamento {
     adiciona(item) {
       this.itens.push(item);
     }
-  
+    remover(item) {
+      const index = this.itens.indexOf(item);
+      if (index !== -1) {
+        this.itens.splice(index, 1);
+      }
+    }
     adicionaTaxa(valor) {
       this.taxa = valor;
     }

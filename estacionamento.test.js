@@ -69,6 +69,18 @@ describe('Testes do estacionamento com Sucesso', () => {
     
         expect(estacionamento.total).toBeCloseTo(95);
       });
+      it('Deve remover o veículo', () => {
+        const veiculo = new Veiculo('Carro', 'QJPD34', 2, 20);
+        const veiculo2 = new Veiculo('Moto', 'MJD03', 3, 15);
+
+        const estacionamento = new Estacionamento();
+        estacionamento.adiciona(veiculo);
+        estacionamento.adiciona(veiculo2);
+
+        estacionamento.remover(veiculo); 
+        expect(estacionamento.itens).not.toContain(veiculo);
+        expect(estacionamento.itens).toContain(veiculo2);
+    });
 })
 describe('Testes do estacionamento com Falha', () => {
     it('Deve retornar erro ao finalizar estacionamento sem veiculo', () => {
