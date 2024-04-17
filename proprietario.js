@@ -1,6 +1,6 @@
 class Proprietario {
     constructor(nome, sobrenome, placaVeiculo){
-        this.itens = [];
+        this.veiculos = [];
         this.nome = nome;
         this.sobrenome = sobrenome;
         this.placaVeiculo = placaVeiculo;
@@ -16,12 +16,12 @@ class Proprietario {
           }
     }
     adiciona(item) {
-        this.itens.push(item);
+        this.veiculos.push(item);
       }
       remover(item) {
-        const index = this.itens.indexOf(item);
+        const index = this.veiculos.indexOf(item);
         if (index !== -1) {
-          this.itens.splice(index, 1);
+          this.veiculos.splice(index, 1);
         }
       }
 }
