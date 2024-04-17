@@ -1,15 +1,10 @@
-const Veiculo = require('./veiculo')
 class Proprietario {
     constructor(nome, sobrenome, placaVeiculo){
+        this.itens = [];
         this.nome = nome;
         this.sobrenome = sobrenome;
         this.placaVeiculo = placaVeiculo;
 
-        Veiculo.validarPlaca(placaVeiculo);
-
-        if (placa !== placaVeiculo) {
-            throw new Error('Placa inválida, a placa informada não pertence a nenhum veículo.');
-          }
         if(typeof nome !== 'string' || nome.trim() === ''){
             throw new Error('O nome deve ser uma string não vazia.');
           }
@@ -20,5 +15,14 @@ class Proprietario {
             throw new Error('Placa inválida, informe uma placa no formato brasileiro (XXX-1234).');
           }
     }
+    adiciona(item) {
+        this.itens.push(item);
+      }
+      remover(item) {
+        const index = this.itens.indexOf(item);
+        if (index !== -1) {
+          this.itens.splice(index, 1);
+        }
+      }
 }
 module.exports = Proprietario;
