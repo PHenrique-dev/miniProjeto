@@ -7,9 +7,6 @@ class Veiculo {
       if(typeof tipo !== 'string' || tipo.trim() === ''){
         throw new Error('O tipo deve ser uma string não vazia.');
       }
-      if (!/^([A-Z]{3})-([0-9]{4})$/.test(placa)) {
-        throw new Error('Placa inválida, informe uma placa no formato brasileiro (XXX-1234).');
-      }
       if(typeof tempo !== 'number' || isNaN(tempo) || tempo <= 0){
         throw new Error('Tempo não informado, informe o tempo de estacionamento do seu veiculo.');
       }
@@ -22,7 +19,11 @@ class Veiculo {
       }else{
         console.log('Tipo de veiculo não aceito em nosso estacionamento')
       }
-      
+    }
+    static validarPlaca(placa) {
+      if (!/^([A-Z]{3})-([0-9]{4})$/.test(placa)) {
+        throw new Error('Placa inválida, informe uma placa no formato brasileiro (XXX-1234).');
+      }
     }
   
     valorEstacionamento() {
