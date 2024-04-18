@@ -1,9 +1,9 @@
 class Proprietario {
-    constructor(nome, sobrenome, placaVeiculo){
+    constructor(nome, sobrenome, telefone){
         this.veiculos = [];
         this.nome = nome;
         this.sobrenome = sobrenome;
-        this.placaVeiculo = placaVeiculo;
+        this.telefone = telefone;
 
         if(typeof nome !== 'string' || nome.trim() === ''){
             throw new Error('O nome deve ser uma string não vazia.');
@@ -11,9 +11,9 @@ class Proprietario {
         if(typeof sobrenome !== 'string' || sobrenome.trim() === ''){
             throw new Error('O sobrenome deve ser uma string não vazia.');
           }
-          if (!/^([A-Z]{3})-([0-9]{4})$/.test(placaVeiculo)) {
-            throw new Error('Placa inválida, informe uma placa no formato brasileiro (XXX-1234).');
-          }
+          if (typeof telefone !== 'string' || telefone.trim() === '') {
+            throw new Error('Telefone não informado ou em um formato inválido. Por favor, informe seu telefone.');
+        }
     }
     adiciona(item) {
         this.veiculos.push(item);
@@ -24,5 +24,8 @@ class Proprietario {
           this.veiculos.splice(index, 1);
         }
       }
+      listarVeiculos() {
+        return this.veiculos;
+    }
 }
 module.exports = Proprietario;
