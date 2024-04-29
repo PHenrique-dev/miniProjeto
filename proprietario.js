@@ -1,9 +1,9 @@
 class Proprietario {
-    constructor(nome, sobrenome, telefone){
-        this.veiculos = [];
-        this.nome = nome;
-        this.sobrenome = sobrenome;
-        this.telefone = telefone;
+    constructor(nome, sobrenome, telefone, id){
+      this.nome = nome;
+      this.sobrenome = sobrenome;
+      this.telefone = telefone;
+      this.id = id;      
 
         if(typeof nome !== 'string' || nome.trim() === ''){
             throw new Error('O nome deve ser uma string não vazia.');
