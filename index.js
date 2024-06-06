@@ -1,12 +1,16 @@
-const Estacionamento = require('./estacionamento')
-const Veiculo = require('./meu-projeto/atividade/veiculo')
+const express = require('express');
+const app = express();
+const estacionamentoRoutes = require('./routes/estacionamentoRoutes');
+const proprietarioRoutes = require('./routes/proprietarioRoutes');
+const veiculoRoutes = require('./routes/veiculoRoutes');
 
-const veiculo = new Estacionamento();
-veiculo.adiciona(new Veiculo('Carro', 'QJPD34', 2));
+app.use(express.json());
 
-veiculo.adicionaTaxa(10);
-veiculo.calculaTotal();
-veiculo.finalizaEstacionamento();
+app.use('/estacionamento', estacionamentoRoutes);
+app.use('/proprietarios', proprietarioRoutes);
+app.use('/veiculos', veiculoRoutes);
 
-console.log(veiculo)
-
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Servidor rodando na porta ${PORT}`);
+});
