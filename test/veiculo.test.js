@@ -1,6 +1,7 @@
 const request = require('supertest');
 const express = require('express');
 const veiculoRoutes = require('../routes/veiculoRoutes');
+const { db, clearDatabase } = require('./db-handler');
 
 const app = express();
 app.use(express.json());
@@ -11,6 +12,10 @@ describe('Testes do controlador de Veiculo', () => {
     
     beforeAll(() => {
         server = app.listen(3001); // ou qualquer porta disponível para testes
+        clearDatabase();
+        run(`Inserir em veiculos (tipo, placa, tempo)
+                    VALUES ('Carro', 'ABC-1234', 2),
+                           ('Moto', 'XYZ-5678', 3)`, done);
     });
 
     afterAll(() => {

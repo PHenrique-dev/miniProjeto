@@ -2,6 +2,8 @@ const request = require('supertest');
 const express = require('express');
 const estacionamentoRoutes = require('../routes/estacionamentoRoutes');
 
+const { db, clearDatabase } = require('./db-handler');
+
 const app = express();
 app.use(express.json());
 app.use('/estacionamento', estacionamentoRoutes);
@@ -11,6 +13,10 @@ describe('Testes do controlador de Estacionamento', () => {
     
     beforeAll(() => {
         server = app.listen(3002); // porta para testes
+        clearDatabase();
+        run(`Insirir em estacionamento (tipo, placa, tempo, valor)
+                    VALUES ('Carro', 'ABC-1234', 2, 20),
+                           ('Moto', 'XYZ-5678', 1, 10)`, done);
     });
 
     afterAll(() => {

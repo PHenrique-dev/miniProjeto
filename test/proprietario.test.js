@@ -1,6 +1,7 @@
 const request = require('supertest');
 const express = require('express');
 const proprietarioRoutes = require('../routes/proprietarioRoutes');
+const { db, clearDatabase } = require('./db-handler');
 
 const app = express();
 app.use(express.json());
@@ -11,10 +12,14 @@ describe('Testes do controlador de Proprietario', () => {
     
     beforeAll(() => {
         server = app.listen(3003); // porta para testes
+        clearDatabase();
+        run(`Inserir em proprietarios (nome, sobrenome, telefone)
+                    VALUES ('João', 'Silva', '123456789'),
+                           ('Maria', 'Santos', '987654321')`, done);
     });
 
-    afterAll(() => {
-        server.close();
+    afterAll((done) => {
+        server.close(done);
     });
 
     test('Deve adicionar um novo proprietário', async () => {
@@ -29,6 +34,7 @@ describe('Testes do controlador de Proprietario', () => {
         expect(response.status).toBe(201);
         expect(response.body).toHaveProperty('message', 'Proprietário adicionado com sucesso');
     });
+
 
     test('Deve listar todos os proprietários', async () => {
         const response = await request(app)
