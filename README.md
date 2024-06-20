@@ -21,22 +21,6 @@ bash
 Copy code
 cd miniProjeto
 npm install
-Como Usar
-Para registrar um veículo no estacionamento e calcular o valor do estacionamento, você pode usar o seguinte exemplo em JavaScript:
-
-javascript
-Copy code
-const Veiculo = require('./veiculo');
-const Estacionamento = require('./estacionamento');
-
-// Criar um veículo
-const carro = new Veiculo('Carro', 'ABC-1234', 2);
-
-// Calcular o valor do estacionamento
-const estacionamento = new Estacionamento();
-const valor = estacionamento.valorEstacionamento();
-
-
 Testes
 Para executar os testes automatizados, use o seguinte comando:
 
