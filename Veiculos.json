@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "placa": "MNO6789",
+        "tipo": "carro",
+        "createdAt": "2024-06-20T12:51:01.615Z",
+        "updatedAt": "2024-06-20T12:51:01.615Z",
+        "ProprietarioId": null
+    },
+    {
+        "id": 2,
+        "placa": "ABC1234",
+        "tipo": "carro",
+        "createdAt": "2024-06-20T12:51:01.657Z",
+        "updatedAt": "2024-06-20T12:51:01.657Z",
+        "ProprietarioId": null
+    },
+    {
+        "id": 3,
+        "placa": "XYZ5678",
+        "tipo": "moto",
+        "createdAt": "2024-06-20T12:51:01.715Z",
+        "updatedAt": "2024-06-20T12:51:01.715Z",
+        "ProprietarioId": null
+    },
+    {
+        "id": 4,
+        "placa": "PQR1234",
+        "tipo": "moto",
+        "createdAt": "2024-06-20T12:51:01.721Z",
+        "updatedAt": "2024-06-20T12:51:01.721Z",
+        "ProprietarioId": null
+    },
+    {
+        "id": 5,
+        "placa": "GHI9012",
+        "tipo": "moto",
+        "createdAt": "2024-06-20T12:51:01.738Z",
+        "updatedAt": "2024-06-20T12:51:01.820Z",
+        "ProprietarioId": null
+    },
+    {
+        "id": 6,
+        "placa": "STU5678",
+        "tipo": "carro",
+        "createdAt": "2024-06-20T12:51:01.744Z",
+        "updatedAt": "2024-06-20T12:51:01.744Z",
+        "ProprietarioId": null
+    },
+    {
+        "id": 7,
+        "placa": "VWX3456",
+        "tipo": "moto",
+        "createdAt": "2024-06-20T12:51:01.774Z",
+        "updatedAt": "2024-06-20T12:51:01.774Z",
+        "ProprietarioId": null
+    },
+    {
+        "id": 9,
+        "placa": "VWX3456",
+        "tipo": "Moto",
+        "createdAt": "2024-06-20T12:52:37.678Z",
+        "updatedAt": "2024-06-20T12:52:37.678Z",
+        "ProprietarioId": null
+    },
+    {
+        "id": 10,
+        "placa": "ABC1234",
+        "tipo": "Carro",
+        "createdAt": "2024-06-20T12:52:41.352Z",
+        "updatedAt": "2024-06-20T12:52:41.352Z",
+        "ProprietarioId": null
+    }
+]

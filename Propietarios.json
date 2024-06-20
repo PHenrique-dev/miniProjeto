@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "nome": "João Silva",
+        "telefone": "123456789",
+        "createdAt": "2024-06-20T12:51:01.664Z",
+        "updatedAt": "2024-06-20T12:51:01.664Z"
+    },
+    {
+        "id": 2,
+        "nome": "Maria Silva",
+        "telefone": "987654321",
+        "createdAt": "2024-06-20T12:51:01.717Z",
+        "updatedAt": "2024-06-20T12:51:01.717Z"
+    },
+    {
+        "id": 3,
+        "nome": "Carlos Oliveira",
+        "telefone": "5566778899",
+        "createdAt": "2024-06-20T12:51:01.825Z",
+        "updatedAt": "2024-06-20T12:51:01.895Z"
+    },
+    {
+        "id": 5,
+        "nome": "Pedro Henrique",
+        "telefone": "77981625185",
+        "createdAt": "2024-06-20T12:52:28.698Z",
+        "updatedAt": "2024-06-20T12:52:28.698Z"
+    },
+    {
+        "id": 6,
+        "nome": "Jadson Rodrgiues",
+        "telefone": "77991584247",
+        "createdAt": "2024-06-20T12:52:31.542Z",
+        "updatedAt": "2024-06-20T12:52:31.542Z"
+    }
+]
