@@ -16,7 +16,7 @@ Clone este repositório:
 bash
 Copy code
 git clone https://github.com/PHenrique-dev/miniProjeto.git
-Instale as dependências:
+Instale as dependências: npm install express body-parser sqlite3 sequelize npm install --save-dev supertest jest
 bash
 Copy code
 cd miniProjeto
